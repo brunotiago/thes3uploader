@@ -1,0 +1,24 @@
+{
+  "name": "thes3uploader",
+  "version": "0.0.1",
+  "description": "A library to help the upload to S3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunotiago/thes3uploader.git"
+  },
+  "keywords": [
+    "s3",
+    "upload",
+    "files"
+  ],
+  "author": "Bruno Araújo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunotiago/thes3uploader/issues"
+  },
+  "homepage": "https://github.com/brunotiago/thes3uploader#readme"
+}
