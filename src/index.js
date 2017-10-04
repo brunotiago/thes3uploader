@@ -25,7 +25,7 @@ module.exports = {
         });
 
         const params = {
-            localFile: fileName,
+            localFile: filePath,
             s3Params: {
                 Bucket: s3Configs.bucket,
                 Key: options.saveAs || filePath.split('/').pop(),
