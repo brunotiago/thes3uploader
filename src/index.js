@@ -24,11 +24,13 @@ module.exports = {
             }
         });
 
+        const saveAs = options.saveAs || filePath.split('/').pop();
+
         const params = {
             localFile: filePath,
             s3Params: {
                 Bucket: s3Configs.bucket,
-                Key: options.saveAs || filePath.split('/').pop(),
+                Key: saveAs,
             }
         };
 
@@ -39,8 +41,10 @@ module.exports = {
                 reject(err);
             });
 
-            uploader.on('end', (data) => {
-                resolve(data);
+            uploader.on('end', () => {
+                const url = `https://s3.${s3Configs.region}.amazonaws.com/${s3Configs.bucket}/${saveAs}`;
+
+                resolve(url);
             });
         });
     }
